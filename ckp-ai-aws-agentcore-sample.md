@@ -190,7 +190,8 @@ git fetch upstream
 git checkout main
 ```
 
-# or whatever branch you’re working on in your fork
+> or whatever branch you’re working on in your fork
+
 4. Merge upstream/main into your branch
 
 ```bash
@@ -199,22 +200,21 @@ git merge upstream/main
 
 If there are no conflicts, Git will create a merge commit and you’re done.
 
-If there are conflicts:
-
-Git will mark the conflicting files.
+If there are conflicts: git will mark the conflicting files.
 
 Open each file, resolve the conflicts (keep both your changes and upstream changes as needed).
 
 Then:
 
 ```bash
-git add <resolved-files>
-git commit
+  git add <resolved-files>
+  git commit
 ```
 5. Push the updated branch to your fork
 ```bash
 git push origin main
 ```
+
 After this, GitHub should no longer show “1 commit behind” (you may still be “X commits ahead” because of your own commits, which is expected).
 
 This approach does not remove or overwrite your files; it just integrates upstream changes alongside them.

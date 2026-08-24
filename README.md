@@ -70,7 +70,7 @@ Focused examples for individual AgentCore capabilities:
 - **[Evaluation](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html)** — Built-in and custom evaluators for on-demand and online evaluation
 - **[Policy](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html)** — Fine-grained access control with Cedar policies
 
-### 💡 [`end-to-end/`](./end-to-end/)
+### 💡 [`end-to-end/`](./02-use-cases/)
 
 **Complete Applications**
 
@@ -105,10 +105,14 @@ The AgentCore CLI (@aws/agentcore) is now the recommended way to create, develop
 
 For new projects, install the AgentCore CLI:
 
+```bash
 npm install -g @aws/agentcore
+```
 Already installed this toolkit? Once you've migrated, uninstall it:
 
+```bash
 pip uninstall bedrock-agentcore-starter-toolkit
+```
 
 
 **Starter Toolkit Samples (Migration complete)**

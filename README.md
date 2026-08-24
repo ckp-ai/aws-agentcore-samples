@@ -46,7 +46,7 @@ Build your first production-ready AI agent with Amazon Bedrock AgentCore. We’l
 
 ## 📁 Repository Structure
 
-### 🚀 [`getting-started/`](./getting-started/)
+### 🚀 [`getting-started/`](./00-getting-started/)
 
 **Your First Agent in Minutes**
 
@@ -55,7 +55,7 @@ Get up and running with the [AgentCore CLI](https://github.com/aws/agentcore-cli
 - **[`python/`](./getting-started/python/)** — Python agent samples (Code Interpreter, Gateway, Memory, Identity, and more)
 - **[`typescript/`](./getting-started/typescript/)** — TypeScript agent samples
 
-### 🧩 [`features/`](./features/)
+### 🧩 [`features/`](./01-features/)
 
 **AgentCore Capabilities Deep Dives**
 
@@ -76,7 +76,7 @@ Focused examples for individual AgentCore capabilities:
 
 Production-ready use cases that combine multiple AgentCore capabilities to solve real business problems. Each includes deployment instructions, architecture diagrams, and testing guides.
 
-### 🔌 [`integrations/`](./integrations/)
+### 🔌 [`integrations/`](./03-integrations/)
 
 **Connect AgentCore to Your Stack**
 
@@ -85,13 +85,13 @@ Production-ready use cases that combine multiple AgentCore capabilities to solve
 - **[`data-platforms/`](./integrations/data-platforms/)** — Data lake, warehouse, and analytics integrations
 - **[`ux-examples/`](./integrations/ux-examples/)** — Streamlit, AG-UI, and other frontend patterns
 
-### 🏗️ [`infrastructure-as-code/`](./infrastructure-as-code/)
+### 🏗️ [`infrastructure-as-code/`](./04-infrastructure-as-code/)
 
 **Deployment Automation**
 
 Production-ready templates for provisioning AgentCore resources with CloudFormation, AWS CDK, or Terraform.
 
-### 🚀 [`blueprints/`](./blueprints/)
+### 🚀 [`blueprints/`](./05-blueprints/)
 
 **Full-Stack Reference Applications**
 

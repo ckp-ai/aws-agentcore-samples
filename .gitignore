@@ -3,7 +3,8 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-
+.aws-agentcore-sample-venv/
+Customer*/
 # Icon must end with two \r
 Icon
 

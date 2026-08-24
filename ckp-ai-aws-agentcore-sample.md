@@ -163,4 +163,58 @@ agentcore deploy
 The `agentcore add agent` command re-populates the `runtimes` array in `agentcore.json` with the same config you originally used, pointing back to your existing `main.py`. Since your app code is still intact, nothing else needs to change.
 
 
+## Resolving Git Config with Upstream and forked Repo
 
+> **I have forked a public repo: https://github.com/awslabs/agentcore-samples. I added my custom files to my forked repo. If I check the repo in Github, it says:**
+
+>This branch is 1 commit ahead of and 1 commit behind awslabs/agentcore-samples:main.
+How to resolve this without affecting each other file
+
+Merge upstream into your branch (simplest, safest)
+This keeps your commit history as-is and just adds the upstream commit on top.
+
+1. Add the upstream remote (if you haven’t already)
+```bash
+git remote add upstream https://github.com/awslabs/agentcore-samples.git
+
+# If it already exists, you’ll see an error; that’s fine.
+```
+
+2. Fetch upstream changes
+
+```bash
+git fetch upstream
+```
+3. Checkout your branch
+```bash
+git checkout main
+```
+
+# or whatever branch you’re working on in your fork
+4. Merge upstream/main into your branch
+
+```bash
+git merge upstream/main
+```
+
+If there are no conflicts, Git will create a merge commit and you’re done.
+
+If there are conflicts:
+
+Git will mark the conflicting files.
+
+Open each file, resolve the conflicts (keep both your changes and upstream changes as needed).
+
+Then:
+
+```bash
+git add <resolved-files>
+git commit
+```
+5. Push the updated branch to your fork
+```bash
+git push origin main
+```
+After this, GitHub should no longer show “1 commit behind” (you may still be “X commits ahead” because of your own commits, which is expected).
+
+This approach does not remove or overwrite your files; it just integrates upstream changes alongside them.

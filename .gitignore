@@ -5,6 +5,7 @@
 .LSOverride
 .aws-agentcore-sample-venv/
 Customer*/
+myresearchagent/
 # Icon must end with two \r
 Icon
 

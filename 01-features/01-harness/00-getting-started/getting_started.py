@@ -35,6 +35,7 @@ from utils.iam import create_harness_role, delete_harness_role
 # ── Configuration ─────────────────────────────────────────────────────────────
 MODEL_HAIKU = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 MODEL_SONNET = "global.anthropic.claude-sonnet-4-6"
+MODEL_BEDROCK = "global.amazon.nova-2-lite-v1:0"
 
 # ── Setup ─────────────────────────────────────────────────────────────────────
 control = get_agentcore_control_client()
@@ -76,8 +77,8 @@ try:
     poll_harness_status(control, harness_id)
     print("✅ Harness is ready")
 
-    # ── Invoke Agent — Haiku ───────────────────────────────────────────────────────
-    print("\n=== Step 3: Invoke Agent (Claude Haiku) ===")
+    # ── Invoke Agent — Bedrock ───────────────────────────────────────────────────────
+    print("\n=== Step 3: Invoke Agent (Bedrock Nova) ===")
     session_id = str(uuid.uuid4()).upper()
     print(f"Session ID: {session_id}\n")
 
@@ -95,7 +96,7 @@ try:
                 ],
             }
         ],
-        model={"bedrockModelConfig": {"modelId": MODEL_HAIKU}},
+        model={"bedrockModelConfig": {"modelId": MODEL_BEDROCK}},
     )
 
     for event in response["stream"]:

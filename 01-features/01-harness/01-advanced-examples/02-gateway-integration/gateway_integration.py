@@ -65,7 +65,8 @@ from utils.iam import create_harness_role, delete_harness_role
 # ── Constants ─────────────────────────────────────────────────────────────────
 DEFAULT_MCP_ENDPOINT = "https://mcp.exa.ai/mcp"
 DEFAULT_TARGET_NAME = "exa-search"
-DEFAULT_MODEL = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+# DEFAULT_MODEL = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+DEFAULT_MODEL = "global.amazon.nova-2-lite-v1:0"
 DEFAULT_PROMPT = (
     "Search the web for the top 5 things to do in Tokyo in spring 2025. "
     "For each activity, include a one-sentence description and the best month to visit. "

@@ -224,3 +224,27 @@ The typo in your curl (`ttps://` instead of `https://`) would have caused it to 
 3. **If the gateway has JWT auth** — you'd add `Authorization: Bearer <token>` to the headers, obtained via your Cognito/OAuth flow first.
 
 The key insight: the Gateway endpoint is just a standard HTTPS JSON-RPC endpoint following the MCP protocol. Any HTTP client works.
+
+## Delete the Resources
+
+```bash
+
+# Delete harness
+aws bedrock-agentcore-control delete-harness \
+  --harness-id <harness-id> \
+  --region ap-south-1
+
+# Delete target (before gateway)
+aws bedrock-agentcore-control delete-gateway-target \
+  --gateway-identifier <gatewayid> \
+  --target-id <target-id> \
+  --region ap-south-1
+
+sleep 10
+
+# Delete gateway
+aws bedrock-agentcore-control delete-gateway \
+  --gateway-identifier <gatewayid> \
+  --region ap-south-1
+
+```

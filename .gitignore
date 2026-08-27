@@ -8,12 +8,15 @@ Customer*/
 myresearchagent/
 # Icon must end with two \r
 Icon
+100-ckp-agent-apps/CostEstimatorProject/agentcore/
+100-ckp-agent-apps/sample-cdk-deployment/
 
 
 # Thumbnails
 ._*
 
 # Files that might appear in the root of a volume
+*.lock
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100

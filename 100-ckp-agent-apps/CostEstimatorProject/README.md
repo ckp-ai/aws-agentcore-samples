@@ -5,7 +5,7 @@ This project was created with the [AgentCore CLI](https://github.com/aws/agentco
 ## Project Structure
 
 ```
-my-project/
+CostEstimatorProject/
 ├── AGENTS.md               # AI coding assistant context
 ├── agentcore/
 │   ├── agentcore.json      # Project config (agents, memories, credentials, gateways, evaluators)

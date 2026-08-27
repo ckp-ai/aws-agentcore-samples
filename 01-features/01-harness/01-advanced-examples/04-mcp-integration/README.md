@@ -5,7 +5,7 @@
 | Tutorial type       | Advanced Example                                                |
 | Agent type          | Research and web search assistant                               |
 | Agentic Framework   | None (direct boto3)                                             |
-| LLM model           | Anthropic Claude Haiku 4.5                                      |
+| LLM model           | global.amazon.nova-2-lite-v1:0                                     |
 | Tutorial components | AgentCore harness — remote_mcp tools, authentication, error handling |
 | Example complexity  | Intermediate                                                    |
 
@@ -40,15 +40,15 @@ The agent automatically discovers available tools from the MCP server and uses t
 
 ## Sample Prompts
 
-**Prompt**: "Search for the latest developments in quantum computing in 2024."
+**Prompt**: "Search for the latest developments in quantum computing in 2026."
 **Expected Behavior**: Agent calls Exa MCP tool, retrieves articles, summarizes key breakthroughs.
 
-**Prompt**: "Research 'Generative AI trends in enterprise 2024' and save a JSON report."
+**Prompt**: "Research 'Generative AI trends in enterprise 2026' and save a JSON report."
 **Expected Behavior**: Agent searches, structures data into JSON, writes `/tmp/ai_trends_report.json`.
 The sample then reads that file back off the VM. Writing it is up to the model, so a run
 that answers in prose instead reports the file as missing rather than claiming success.
 
-**Prompt**: "Compare search results about 'AWS re:Invent 2024' from different sources."
+**Prompt**: "Compare search results about 'AWS re:Invent 2026' from different sources."
 **Expected Behavior**: Agent uses multiple MCP tools (if configured), compares results.
 
 **Prompt (error handling)**: "Search using an invalid MCP URL."
@@ -159,7 +159,7 @@ The interactive wizard lets you add remote MCP servers under **Advanced Settings
 agentcore deploy
 agentcore invoke --harness myresearchagent \
   --session-id "$(uuidgen)" \
-  "Search for the latest developments in quantum computing in 2024."
+  "Search for the latest developments in quantum computing in 2026."
 ```
 
 ## Clean Up

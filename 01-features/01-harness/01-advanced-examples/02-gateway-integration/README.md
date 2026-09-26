@@ -5,7 +5,7 @@
 | Tutorial type       | Advanced Example                                               |
 | Agent type          | Search and retrieval assistant                                 |
 | Agentic Framework   | None (direct boto3)                                            |
-| LLM model           | Anthropic Claude Haiku 4.5                                     |
+| LLM model           | global.amazon.nova-2-lite-v1:0                                     |
 | Tutorial components | AgentCore harness + gateway — MCP proxy, tool routing          |
 | Example complexity  | Intermediate                                                   |
 

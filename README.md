@@ -46,7 +46,7 @@ Build your first production-ready AI agent with Amazon Bedrock AgentCore. We’l
 
 ## 📁 Repository Structure
 
-### 🚀 [`getting-started/`](./getting-started/)
+### 🚀 [`getting-started/`](./00-getting-started/)
 
 **Your First Agent in Minutes**
 
@@ -55,7 +55,7 @@ Get up and running with the [AgentCore CLI](https://github.com/aws/agentcore-cli
 - **[`python/`](./getting-started/python/)** — Python agent samples (Code Interpreter, Gateway, Memory, Identity, and more)
 - **[`typescript/`](./getting-started/typescript/)** — TypeScript agent samples
 
-### 🧩 [`features/`](./features/)
+### 🧩 [`features/`](./01-features/)
 
 **AgentCore Capabilities Deep Dives**
 
@@ -70,13 +70,13 @@ Focused examples for individual AgentCore capabilities:
 - **[Evaluation](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html)** — Built-in and custom evaluators for on-demand and online evaluation
 - **[Policy](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy.html)** — Fine-grained access control with Cedar policies
 
-### 💡 [`end-to-end/`](./end-to-end/)
+### 💡 [`end-to-end/`](./02-use-cases/)
 
 **Complete Applications**
 
 Production-ready use cases that combine multiple AgentCore capabilities to solve real business problems. Each includes deployment instructions, architecture diagrams, and testing guides.
 
-### 🔌 [`integrations/`](./integrations/)
+### 🔌 [`integrations/`](./03-integrations/)
 
 **Connect AgentCore to Your Stack**
 
@@ -85,13 +85,13 @@ Production-ready use cases that combine multiple AgentCore capabilities to solve
 - **[`data-platforms/`](./integrations/data-platforms/)** — Data lake, warehouse, and analytics integrations
 - **[`ux-examples/`](./integrations/ux-examples/)** — Streamlit, AG-UI, and other frontend patterns
 
-### 🏗️ [`infrastructure-as-code/`](./infrastructure-as-code/)
+### 🏗️ [`infrastructure-as-code/`](./04-infrastructure-as-code/)
 
 **Deployment Automation**
 
 Production-ready templates for provisioning AgentCore resources with CloudFormation, AWS CDK, or Terraform.
 
-### 🚀 [`blueprints/`](./blueprints/)
+### 🚀 [`blueprints/`](./05-blueprints/)
 
 **Full-Stack Reference Applications**
 
@@ -105,10 +105,14 @@ The AgentCore CLI (@aws/agentcore) is now the recommended way to create, develop
 
 For new projects, install the AgentCore CLI:
 
+```bash
 npm install -g @aws/agentcore
+```
 Already installed this toolkit? Once you've migrated, uninstall it:
 
+```bash
 pip uninstall bedrock-agentcore-starter-toolkit
+```
 
 
 **Starter Toolkit Samples (Migration complete)**

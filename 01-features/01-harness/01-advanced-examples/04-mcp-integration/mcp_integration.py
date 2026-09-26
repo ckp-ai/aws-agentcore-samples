@@ -36,7 +36,7 @@ from utils.harness import poll_harness_status
 from utils.iam import create_harness_role, delete_harness_role
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-MODEL_ID = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+MODEL_ID = "global.amazon.nova-2-lite-v1:0"
 EXA_MCP_URL = "https://mcp.exa.ai/mcp"
 
 # ── Setup ─────────────────────────────────────────────────────────────────────
@@ -125,7 +125,7 @@ try:
     result = stream_invoke(
         session_id=session1,
         prompt=(
-            "Search for the latest developments in quantum computing in 2024. "
+            "Search for the latest developments in quantum computing in 2026. "
             "Find 3-5 recent articles and summarize the key breakthroughs."
         ),
         tools=[
@@ -146,7 +146,7 @@ try:
     result = stream_invoke(
         session_id=session2,
         prompt=(
-            "Compare search results from different sources about 'AWS re:Invent 2024 announcements'. "
+            "Compare search results from different sources about 'AWS re:Invent 2026 announcements'. "
             "What were the major announcements?"
         ),
         tools=[

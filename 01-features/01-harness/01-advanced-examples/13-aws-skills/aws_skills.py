@@ -76,6 +76,7 @@ from utils.iam import create_harness_role, delete_harness_role
 # Constants
 # ---------------------------------------------------------------------------
 DEFAULT_MODEL = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+MODEL_BEDROCK = "global.amazon.nova-2-lite-v1:0"
 DEFAULT_GLOB = "core-skills/*"
 DEFAULT_SPECIFIC = "specialized-skills/operations-skills/troubleshooting-application-failures"
 DEFAULT_PROMPT = "What AWS skills do you have available? Give a short bulleted summary by category."
@@ -108,9 +109,9 @@ parser.add_argument(
 )
 parser.add_argument(
     "--model",
-    default=DEFAULT_MODEL,
+    default=MODEL_BEDROCK,
     metavar="MODEL_ID",
-    help=f"Bedrock model ID (default: {DEFAULT_MODEL})",
+    help=f"Bedrock model ID (default: {MODEL_BEDROCK})",
 )
 parser.add_argument(
     "--message",
